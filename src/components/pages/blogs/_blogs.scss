@@ -1,0 +1,66 @@
+.blogs {
+  @include grid(3, 1.5rem);
+  
+  @include tablet{
+      @include grid(2, 1rem);
+  }
+  @include telefono{
+      @include grid(1, 1rem);
+  }
+  }
+  .blogs-view{
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    column-gap: 1.5rem;
+    .blog{
+        background: $white;
+        padding: 1rem;
+        h3{
+            @include titleText(3.2rem);
+            text-align: center;
+            padding-bottom: 1rem;
+        }
+        h4{
+            @include titleText(2.5rem);
+        }
+        p{
+            @include graphText(1.8rem);
+            text-transform: none;
+            padding-bottom: 2rem;
+        }
+        img{
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+    }
+    .sidebar{
+        background: $white;
+        padding: 2rem;
+        h3{
+            @include titleText(3.2rem);
+            padding-bottom: 1rem;
+        }
+        ul{
+            li{
+                margin-left: 1.5rem;
+                padding: 1rem 0;
+                font-size: 2rem;
+                color: $primaryText;
+                a{
+                    color: $secondaryText;
+                    transition: all .5s ease;
+                    &:hover{
+                        color: $primaryColor;
+                        transition: all .5s ease;
+
+                    }
+                }
+            }
+
+        }
+    }
+@include tablet{
+    @include grid(1, 1.5rem);
+}
+}

@@ -1,0 +1,139 @@
+.home{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    min-height: calc(92.5vh - 6.5rem);
+    text-align: center;
+    .image{
+        flex: 1 1 42rem;
+        text-align: center;
+        height: 50rem;
+        width: 50rem;
+    }
+    .content{
+        flex: 1 1 42rem;
+        text-align: center;
+        h2{
+            color: $primaryText;
+            font-size: 3rem;
+            padding-bottom: .5rem;
+            font-weight: normal;
+            line-height: 1.2;
+            span {
+                font-size: 4rem;
+                color: $primaryColor;
+                padding: .5rem 0;
+                display: block;
+                font-weight: bolder;
+            }
+        }
+        h3{
+            color: $primaryText;
+            font-size: 3rem;
+            padding: 1rem 0;
+            font-weight: normal;
+            line-height: 1.2;
+            span {
+                font-size: 4rem;
+                color: $primaryColor;
+                padding: .5rem 0;
+                display: block;
+                font-weight: bolder;
+            }
+        }
+        
+        p{
+            font-size: 2rem;
+            color: $secondaryText;
+            padding: 1rem 0;
+            line-height: 1.7;
+            text-transform: none;
+            margin-bottom: 2rem;
+            span{
+                font-weight: 700;
+                text-transform: none;
+            }
+        }
+
+    }
+    @include tablet{
+    }
+    @include telefono{
+        .content{
+            line-height: 1;
+            p{
+                padding: 0;
+            }
+        }
+        .image{
+            height: 30rem;
+            width: 30rem;
+        }
+    }
+}
+
+
+#Group_1{
+    animation: g1 5s linear infinite;
+}
+#Group_2{
+    animation: g2 10s linear infinite;
+}
+#Group_3{
+    animation: g3 15s linear infinite;
+}
+
+#Group_4{
+    animation: g4 3s linear infinite;
+}
+#Group_7{
+    animation: g7 30s linear infinite;
+}
+
+@keyframes g1 {
+    0%, 100%{
+        transform: translateX(0rem);
+    }
+    50%{
+        transform: translateX(5rem);
+    }
+}
+@keyframes g2 {
+    0%, 100%{
+        transform: translateX(-5rem);
+    }
+    50%{
+        transform: translateX(0rem);
+    }
+}
+@keyframes g3 {
+    0%, 100%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+}
+@keyframes g4 {
+    0%, 100%{
+        transform: translateY(0rem);
+        opacity: .5;
+        
+    }
+    50%{
+        transform: translateY(-.5rem);
+        opacity: 1;
+    }
+    
+}
+@keyframes g7 {
+    0%, 100%{
+        transform: translateY(0rem);
+        transform: translateX(-1rem);
+    }
+    50%{
+        transform: translateY(-1rem);
+        transform: translateX(0rem);
+    }
+}

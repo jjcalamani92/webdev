@@ -1,0 +1,22 @@
+.product {
+@include grid(4, 1.5rem);
+
+@include tablet{
+    @include grid(2, 1.5rem);
+}
+@include telefono{
+    @include grid(1, 1.5rem);
+}
+}
+
+.product-more {
+    
+    @include grid(6, 1.5rem);
+      
+    @include tablet{
+        @include grid(3, 1.5rem);
+    }
+    @include telefono{
+        @include grid(2, 1.5rem);
+    }
+}

@@ -1,0 +1,10 @@
+.portfolio {
+  @include grid(3, 1.5rem);
+  
+  @include tablet{
+      @include grid(2, 1rem);
+  }
+  @include telefono{
+      @include grid(1, 1rem);
+  }
+  }

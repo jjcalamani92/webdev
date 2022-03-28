@@ -1,0 +1,94 @@
+.about{
+  z-index: 0;
+  .row{
+    @include grid(2,1.5rem);
+      align-items: center;
+      .info-container{
+          
+          .box-container{
+            @include grid(2,1rem);
+              .box{
+                  h3{
+                      font-size: 1.7rem;
+                      color:$secondaryText;
+                      padding:1rem 0;
+                      font-weight: normal;
+                      text-transform: none;
+                      span{
+                          color:$primaryColor;
+                          font-weight: 700;
+                      }
+                  }
+              }
+          }
+      }
+      .count-container{
+          @include grid(3,1rem);
+              .box{
+                  padding:1rem 2.5rem;
+                  border-radius: .5rem;
+                  background: #fff;
+                  box-shadow: $box-shadow;
+                  text-align: center;
+                  h3{
+                      font-size: 4rem;
+                      color:$primaryColor;
+                  }
+                  p{
+                      font-size: 2rem;
+                      color:$primaryText;
+                  }
+          }
+      
+        }
+              @include tablet{
+                  @include grid(1,1rem);
+              }
+              @include telefono{
+                .info-container{
+                    .box-container{
+                        @include grid(1,0rem);
+                    }
+                }
+                .count-container{
+                    @include grid(1,1rem);
+                }
+            }
+  }
+}
+  
+    
+
+    
+
+
+.skills {
+  @include grid(4, 1.5rem);
+  
+  @include tablet{
+      @include grid(2, 1rem);
+  }
+  @include telefono{
+      @include grid(1, 1rem);
+  }
+  }
+.courses {
+  @include grid(3, 1.5rem);
+  
+  @include tablet{
+      @include grid(2, 1rem);
+  }
+  @include telefono{
+      @include grid(1, 1rem);
+  }
+  }
+  .academys {
+    @include grid(5, 1.5rem);
+    
+    @include tablet{
+        @include grid(2, 1rem);
+    }
+    @include telefono{
+        @include grid(1, 1rem);
+    }
+    }

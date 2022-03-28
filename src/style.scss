@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap');
+
+// Tamaño de Media Queries
+$desktop: 1440px;
+$tablet: 768px;
+$telefono: 540px;
+$fold: 375px;
+
+
+// Colores
+$primaryColor: #FF9800;
+$darkPrimaryColor: #F57C00;
+$lightPrimaryColor: #FFE0B2;
+$primaryText:#212121;
+$secondaryText:#757575;
+$accentColor: #FF9800;
+$backgroundColor: #eee;
+$white: #fff;
+$black: #000;
+
+
+$border : .1rem solid rgba(0,0,0,.4);
+$borderB:.1rem solid $primaryColor;
+$box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+
+/** Media Queries **/
+@mixin fold {
+  @media (max-width: #{$fold}) {
+      @content;
+  }
+}
+@mixin telefono {
+  @media (max-width: #{$telefono}) {
+      @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+      @content;
+  }
+}
+@mixin desktop {
+  @media (max-width: #{$desktop}) {
+      @content;
+  }
+}
+@mixin grid($columnas, $espaciado ) {
+  display: grid;
+  gap: $espaciado;
+  grid-template-columns: repeat($columnas, 1fr);
+}
+
+@mixin titleText($titleSize) {
+  font-size: $titleSize;
+  text-transform: capitalize;
+  color:$primaryText;
+}
+
+@mixin graphText($graphSize) {
+  font-size: $graphSize;
+  line-height: 2;
+  color:$secondaryText;
+}
+@mixin icon($iconSize) {
+  width: $iconSize;
+  height: $iconSize;
+  line-height: $iconSize;
+  font-size: $iconSize/2;
+  color:$primaryText;
+  border-radius: .5rem;
+  padding: 1rem;
+  
+}
+
+* {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  text-transform: none;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  overflow-x: hidden;
+  @include tablet{
+    font-size: 55%;
+  }
+  @include telefono(){
+    font-size: 50%;
+  }
+}
+
+body {
+  background: $white;
+}
+
+section {
+  padding: 0rem 9%;
+  @include tablet{
+    padding: 0rem 7%
+  }
+  @include telefono{
+    padding: 1.5rem
+  }
+}
+
+@import './components/layouts/header/header';
+@import './components/layouts/heading/heading';
+@import './components/layouts/banner/banner';
+@import './components/layouts/button/button';
+@import './components/layouts/category/category';
+@import './components/layouts/cart/cart';
+@import './components/layouts/card/card';
+@import './components/layouts/details/detail';
+@import './components/layouts/footer/footer';
+
+@import './components/pages/home/home';
+@import './components/pages/about/about';
+@import './components/pages/product/product';
+@import './components/pages/contact/contact';
+@import './components/pages/portfolio/portfolio';
+@import './components/pages/service/service';
+@import './components/pages/blogs/blogs';
